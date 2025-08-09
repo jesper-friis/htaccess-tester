@@ -34,6 +34,9 @@ docker run -p 8080:80 -v "$PWD:/usr/local/apache2/htdocs" htaccess-tester
 
 and navigate via browser or some other client such as `curl` to [http://localhost:8080](https://localhost:8080).
 
+
+<!-- Commented out since docker-compose seems not to run the Dockerfile
+
 ### Via Github/Docker Compose (more control)
 
 For a little bit more control over the apache environment, you might just clone the repository locally and modify the `Dockerfile`/`docker-compose.yml` to your liking.
@@ -57,3 +60,4 @@ Any changes that are made to the `httpd.conf` will require a full rebuild of the
 ```
 docker-compose build --force-rm --no-cache --pull
 ```
+-->
