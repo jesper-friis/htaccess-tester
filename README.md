@@ -1,10 +1,11 @@
 
 ## Apache .htaccess Tester
-
+<!--
 [![Docker Pulls](https://img.shields.io/docker/pulls/jesper-friis/htaccess-tester.svg?style=flat-square)]()
 [![Docker Build Status](https://img.shields.io/docker/build/jesper-friis/htaccess-tester.svg?style=flat-square)]()
+-->
 
-Fork of [chaseconey/htaccess-tester](https://github.com/chaseconey/htaccess-tester) intended for testing the redirection rules for EMMO.
+> Fork of [chaseconey/htaccess-tester](https://github.com/chaseconey/htaccess-tester) intended for testing the redirection rules for EMMO.
 
 A simple Docker container with mod_rewrite enabled for testing all of your .htaccess needs.
 
@@ -39,9 +40,17 @@ For a little bit more control over the apache environment, you might just clone 
 
 To test your .htaccess, simply boot up your container, and add your rules. By default, you can hit the running container via [http://localhost:8080](http://localhost:8080)
 
-* Boot container using compose - `docker-compose up`
-* Make edits to .htaccess - `vim .htaccess`
-* Test .htaccess by visiting expected url - `curl -IL http://localhost:8080/rawr`
+* Boot container using compose
+
+      `docker-compose up`
+
+* Make edits to .htaccess
+
+      `vim .htaccess`
+
+* Test .htaccess by visiting expected url
+
+      `curl -IL http://localhost:8080/emmo`
 
 Any changes that are made to the `httpd.conf` will require a full rebuild of the image
 
